@@ -44,6 +44,7 @@ class Tester(unittest.TestCase):
         if result:
             print("Function 'decide' is passed.")
 
+
     def test_3_get_latest(self):
         result = reports.get_latest(self.input_file)
         expected = "Diablo III"
@@ -51,12 +52,14 @@ class Tester(unittest.TestCase):
         if result == expected:
             print("Function 'get_latest' is passed.")
 
+
     def test_4_count_by_genre(self):
         result = reports.count_by_genre(
             self.input_file, "First-person shooter")
         self.assertEqual(result, 6)
         if result == 6:
             print("Function 'count_by_genre' is passed.")
+
 
     def test_5_get_line_number_by_title(self):
         result = reports.get_line_number_by_title(
@@ -81,7 +84,7 @@ class Tester(unittest.TestCase):
 
         if correct:
             print("Bonus function 'sort_abc' is passed.")
-
+"""
     def test_bonus_2_get_genres(self):
         result = reports.get_genres(self.input_file)
         expected_result = sorted(["Action-adventure", "First-person shooter",
@@ -105,7 +108,7 @@ class Tester(unittest.TestCase):
         self.assertEqual(result, 1999)
         if result == 1999:
             print("Bonus function 'when_was_top_sold_fps' is passed.")
-
+"""
 
 def main():
     unittest.main()
